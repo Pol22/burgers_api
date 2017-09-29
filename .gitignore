@@ -1,3 +1,6 @@
+venv
+staticfiles
+.env
 *.egg-info
 *.pot
 *.py[co]
