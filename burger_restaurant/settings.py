@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'burger_restaurant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'burger_net_db',
-        'USER': 'postgres',
-        'PASSWORD': '05011996',
-        'HOST': '127.0.0.1',
+        'NAME': 'dccgei7vl45sm8',
+        'USER': 'prfmquvcudulmi',
+        'PASSWORD': 'a598b8cac74d3fe19f5737181bcccbaa2039079062d3b000b52d9b71592d4567',
+        'HOST': 'ec2-184-72-248-8.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
