@@ -5,3 +5,4 @@ django-toolbelt
 gunicorn 
 psycopg2 
 static3
+whitenoise
