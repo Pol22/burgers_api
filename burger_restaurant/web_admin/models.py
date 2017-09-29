@@ -14,17 +14,6 @@ class Restaurant(models.Model):
         verbose_name_plural = 'Рестораны'
 
 
-class Operator(models.Model):
-    name = models.CharField(max_length=256, unique=True, blank=True)
-
-    def __str__(self):
-        return 'Оператор %s' % self.name
-
-    class Meta:
-        verbose_name = 'Оператор'
-        verbose_name_plural = 'Операторы'
-
-
 class Category(models.Model):
     name = models.CharField(max_length=64, unique=True, blank=True)
 
@@ -67,7 +56,7 @@ class Dish(models.Model):
 
 
 class Order(models.Model):
-    operator = models.ForeignKey(Operator)
+    operator = models.CharField(max_length=256)
     restaurant = models.ForeignKey(Restaurant)
     total_price = models.FloatField(default=0.0)
     date = models.DateTimeField(auto_now_add=True)
@@ -94,6 +83,10 @@ class DishesInOrder(models.Model):
 
     def __str__(self):
         return 'Блюдо %s в заказе №%d' % (self.dish.name, self.order.id)
+
+    class Meta:
+        verbose_name = 'Блюдо в заказе'
+        verbose_name_plural = 'Блюда в заказе'
 
     def save(self, *args, **kwargs):
         price_per_item = self.dish.price

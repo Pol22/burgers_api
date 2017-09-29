@@ -3,7 +3,6 @@ from .models import *
 
 
 admin.site.register(Restaurant)
-admin.site.register(Operator)
 admin.site.register(Category)
 admin.site.register(Subcategory)
 admin.site.register(Dish)
