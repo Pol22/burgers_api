@@ -43,7 +43,8 @@ def create_order(request):
     if user is not None:
         try:
             json_dict = json.loads(request.body.decode('utf'))[0]
-            if 'restaurant' or 'order' not in json_dict.keys():
+            keys = json_dict.keys()
+            if 'restaurant' not in keys or 'order' not in keys:
                 raise KeyError('Not restaurant or order keys')
 
             new_order = Order.objects.create(
