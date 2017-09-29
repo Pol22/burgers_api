@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'so(0+lbz8$q+dulruys2cmg8k63fwl38cbui=b!sdgi_9#jiv_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fathomless-depths-18520.herokuapp.com']
 
 
 # Application definition
